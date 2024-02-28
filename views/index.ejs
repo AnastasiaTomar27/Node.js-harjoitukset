@@ -1,0 +1,21 @@
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="blogit sisalto">
+        <h2>Kaikki Blogit</h2>
+        <% if (blogit.length > 0) { %>
+            <% blogit.forEach(blogi => { %>
+
+                <h3 class="otsikko"><%= blogi.otsikko %></h3>
+                <p class="ingressi"><%= blogi.ingressi %></p>
+            
+            <% }) %>
+        <% } %>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
